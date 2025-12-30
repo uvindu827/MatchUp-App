@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class AppConstants {
   // Brand Name
-  static const String appName = 'NOTEHERE';
-  static const String poweredBy = 'POWERED BY AQUACORE';*/
-  static const String AppTitle = 'NoteHere';
+  static const String appName = 'MATCH-UP';
+  static const String poweredBy = 'POWERED BY AQUACORE';
+  static const String AppTitle = 'MatchUp';
 
   // logo
   static const String LogoPath = 'assets/logo/3-removebg-preview (1).png';
@@ -12,7 +12,7 @@ class AppConstants {
   // Primary Colors (from your splash screen)
   static const Color primaryText = Color(
     0xff404b5c,
-  ); // Dark blue-gray for "NOTEHERE"
+  ); // Dark blue-gray for "MATCH-UP"
   static const Color accentOrange = Color(
     0xffff7a00,
   ); // Orange for "AQUACORE" and accents
