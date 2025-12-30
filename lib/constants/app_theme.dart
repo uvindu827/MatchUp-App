@@ -41,7 +41,7 @@ class AppTheme {
       error: AppConstants.error,
       onPrimary: AppConstants.onPrimary,
       onSecondary: AppConstants.onSecondary,
-      onBackground: AppConstants.onBackground,
+      onSurface: AppConstants.onBackground,
     ),
     textTheme: const TextTheme(
       headlineLarge: TextStyle(
@@ -61,13 +61,15 @@ class AppTheme {
 }
 
 class bottomNav_bar {
-  static const String name1 = 'Remember';
-  static const String name2 = 'Notes';
-  static const String name3 = 'Add Note';
+  static const String name1 = 'Umpire';
+  static const String name2 = 'Home';
+  static const String name3 = 'Score';
+  static const String name4 = 'Settings';
 
-  static const IconData icon1 = Icons.alarm;
-  static const IconData icon2 = Icons.note_alt;
-  static const IconData icon3 = Icons.add;
+  static const IconData icon1 = Icons.person;
+  static const IconData icon2 = Icons.home;
+  static const IconData icon3 = Icons.bar_chart;
+  static const IconData icon4 = Icons.settings;
 
   static const Color selectedColor = Color(0xffff7a00);
   static const Color unseletedColor = Colors.grey;

@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'login_page.dart';
-import 'package:notehere/layout/main_layout.dart';
-import 'package:notehere/constants/app_theme.dart';
+import 'package:matchup/layout/main_layout.dart';
+import 'package:matchup/constants/app_theme.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});

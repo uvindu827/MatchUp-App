@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:notehere/features/auth/presentation/pages/addNote_page.dart';
-import 'package:notehere/features/auth/presentation/pages/note_page.dart';
+import 'package:matchup/features/Score_page/presentation/page/score_page.dart';
 import 'bottom_nav.dart';
-import '../features/auth/presentation/pages/home_page.dart';
-import '../features/auth/presentation/pages/profile_page.dart';
-import '../features/auth/presentation/pages/setting_page.dart';
+import 'home_page.dart';
+import '../features/Profile/presentation/page/profile_page.dart';
+import '../features/Setting_page/presentation/page/setting_page.dart';
 import '../features/auth/presentation/pages/splash_page.dart';
 import '../features/auth/presentation/pages/login_page.dart';
-import '../features/auth/presentation/pages/remember_page.dart';
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});
@@ -20,9 +18,10 @@ class _MainLayoutState extends State<MainLayout> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const RememberPage(),
-    NotePage(),
-    const AddNotePage(),
+    const ProfilePage(),
+    const HomePage(),
+    const ScorePage(),
+    const SettingPage(),
     // const Center(child: Text('Profile Page', style: TextStyle(fontSize: 32))),
   ];
 

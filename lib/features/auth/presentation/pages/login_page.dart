@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'register_page.dart';
-import 'package:notehere/layout/main_layout.dart';
-import 'package:notehere/constants/app_theme.dart';
+import 'package:matchup/layout/main_layout.dart';
+import 'package:matchup/constants/app_theme.dart';
+import 'package:matchup/constants/app_theme.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
