@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:notehere/features/auth/presentation/pages/addNote_page.dart';
+import 'package:notehere/features/auth/presentation/pages/note_page.dart';
+import 'bottom_nav.dart';
 import '../features/auth/presentation/pages/home_page.dart';
-import '../features/auth/presentation/pages/score_page.dart';
 import '../features/auth/presentation/pages/profile_page.dart';
 import '../features/auth/presentation/pages/setting_page.dart';
+import '../features/auth/presentation/pages/splash_page.dart';
+import '../features/auth/presentation/pages/login_page.dart';
+import '../features/auth/presentation/pages/remember_page.dart';
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});
@@ -12,37 +17,29 @@ class MainLayout extends StatefulWidget {
 }
 
 class _MainLayoutState extends State<MainLayout> {
-  int _currentIndex = 0;
+  int _selectedIndex = 0;
 
-  final List<Widget> _pages = const [
-    HomePage(),
-    ScorePage(),
-    ProfilePage(),
-    SettingPage(),
+  final List<Widget> _pages = [
+    const RememberPage(),
+    NotePage(),
+    const AddNotePage(),
+    // const Center(child: Text('Profile Page', style: TextStyle(fontSize: 32))),
   ];
 
-  void _onTabTapped(int index) {
+  void _onItemTapped(int index) {
     setState(() {
-      _currentIndex = index;
+      _selectedIndex = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: _onTabTapped,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.score), label: 'Score'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-        ],
+      appBar: AppBar(title: const Text('NoteHere')),
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: BottomNav(
+        selectedIndex: _selectedIndex,
+        onItemTapped: _onItemTapped,
       ),
     );
   }
